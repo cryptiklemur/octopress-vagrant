@@ -21,7 +21,7 @@
         "irc": "irc://irc.freenode.net/sdphp"
     },
     "bin": [
-        "composer/bin/vagrant"
+        "composer/bin/vagrant-init"
     ],
     "config": {
         "bin-dir": "../bin"
