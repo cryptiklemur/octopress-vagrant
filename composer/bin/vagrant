@@ -13,6 +13,6 @@ if( file_exists( __DIR__ . '_vagrant_setup' ) )
 
 link( __DIR__ . 'vendor/aequasi/octopress-vagrant/Vagrantfile', __DIR__ . 'Vagrantfile' );
 link( __DIR__ . 'vendor/aequasi/octopress-vagrant/_vagrant_setup', __DIR__ . '_vagrant_setup' );
-`cd {$basedir} && vagrant up`
+system( "cd {$basedir} && vagrant up" );
 unlink( __DIR__ . 'Vagrantfile' );
 unlink( __DIR__ . '_vagrant_setup' );
