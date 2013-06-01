@@ -7,16 +7,16 @@ You can also install this using composer.
 
 1. First, make sure you have a `composer.json` file, with the following in it
 
-```
-    "config": {
-        "bin-dir": "bin"
-    }
-```
+	```
+	    "config": {
+		"bin-dir": "bin"
+	    }
+	```
 
 2. Then, you can require the package
 
-```sh
-composer require "aequasi/octopress-vagrant" dev-master
-```
+	```sh
+	composer require "aequasi/octopress-vagrant" dev-master
+	```
 
 3. From there, you can just type `./bin/vagrant-init`, and it will symlink the files you need to run `vagrant`
