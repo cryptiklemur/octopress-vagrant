@@ -24,7 +24,7 @@
         "composer/bin/vagrant"
     ],
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "../bin"
     }
 }
 
