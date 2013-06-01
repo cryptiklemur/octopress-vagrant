@@ -5,10 +5,10 @@
     "type": "library",
     "keywords": [
         "vagrant",
-        "octopress",
+        "octopress"
     ],
     "homepage": "http://aaronscherer.me",
-    "license": "Apache2",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Aaron Scherer",
@@ -21,7 +21,7 @@
         "irc": "irc://irc.freenode.net/sdphp"
     },
     "require": {
-        "vagrant": "*",
+        "vagrant": "*"
     },
     "bin": [
         "composer/bin/vagrant"
