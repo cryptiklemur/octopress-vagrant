@@ -19,6 +19,3 @@ if( file_exists( $vsTo ) )
 
 link( $vfFrom, $vfTo );
 link( $vsFrom, $vsTo );
-system( "cd {$basedir} && vagrant up" );
-unlink( $vfTo );
-unlink( $vsTo );
