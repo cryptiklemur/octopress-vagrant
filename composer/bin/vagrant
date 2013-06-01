@@ -5,14 +5,20 @@
  * @author Aaron Scherer <aequasi@gmail.com>
  */
 
-$basedir = __DIR__ . '/../';
-if( file_exists( __DIR__ . 'Vagrantfile' ) )
+$basedir = __DIR__ . '/../../../../../';
+$vfTo    =  $basedir . 'Vagrantfile';
+$vfFrom  =  $basedir . 'vendor/aequasi/octopress-vagrant/Vagrantfile';
+
+$vsTo    =  $basedir . '_vagrant_setup';
+$vsFrom  =  $basedir . 'vendor/aequasi/octopress-vagrant/_vagrant_setup';
+
+if( file_exists( $vfTo ) )
 	throw new \Exception( "Vagrantfile already exists in your base project directory." );
-if( file_exists( __DIR__ . '_vagrant_setup' ) )
+if( file_exists( $vsTo ) )
 	throw new \Exception( "_vagrant_setup/ already exists in your base project directory." );
 
-link( __DIR__ . 'vendor/aequasi/octopress-vagrant/Vagrantfile', __DIR__ . 'Vagrantfile' );
-link( __DIR__ . 'vendor/aequasi/octopress-vagrant/_vagrant_setup', __DIR__ . '_vagrant_setup' );
+link( $vfFrom, $vfTo );
+link( $vsFrom, $vsTo );
 system( "cd {$basedir} && vagrant up" );
-unlink( __DIR__ . 'Vagrantfile' );
-unlink( __DIR__ . '_vagrant_setup' );
+unlink( $vfTo );
+unlink( $vsTo );
