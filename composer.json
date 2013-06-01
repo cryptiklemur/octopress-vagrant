@@ -1,0 +1,33 @@
+
+{
+    "name": "aequasi/octopress-vagrant",
+    "description": "Vagrant files for octopress",
+    "type": "library",
+    "keywords": [
+        "vagrant",
+        "octopress",
+    ],
+    "homepage": "http://aaronscherer.me",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "Aaron Scherer",
+            "email": "aequasi@gmail.com",
+            "role": "lead"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/aequasi/octopress-vagrant/issues",
+        "irc": "irc://irc.freenode.net/sdphp"
+    },
+    "require": {
+        "vagrant": "*",
+    },
+    "bin": [
+        "composer/bin/vagrant"
+    ],
+    "config": {
+        "bin-dir": "bin"
+    }
+}
+

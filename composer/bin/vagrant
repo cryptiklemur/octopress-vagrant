@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Wrapper for vagrant. Links Vagrantfile and _vagrant_setup to the base dir, and runs vagrant up, then unlinks
+ * @author Aaron Scherer <aequasi@gmail.com>
+ */
+
+$basedir = __DIR__ . '/../';
+if( file_exists( __DIR__ . 'Vagrantfile' ) )
+	throw new \Exception( "Vagrantfile already exists in your base project directory." );
+if( file_exists( __DIR__ . '_vagrant_setup' ) )
+	throw new \Exception( "_vagrant_setup/ already exists in your base project directory." );
+
+link( __DIR__ . 'vendor/aequasi/octopress-vagrant/Vagrantfile', __DIR__ . 'Vagrantfile' );
+link( __DIR__ . 'vendor/aequasi/octopress-vagrant/_vagrant_setup', __DIR__ . '_vagrant_setup' );
+`cd {$basedir} && vagrant up`
+unlink( __DIR__ . 'Vagrantfile' );
+unlink( __DIR__ . '_vagrant_setup' );
