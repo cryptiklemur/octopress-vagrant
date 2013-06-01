@@ -8,9 +8,9 @@ You can also install this using composer.
 1. First, make sure you have a `composer.json` file, with the following in it
 
 	```
-	    "config": {
+	"config": {
 		"bin-dir": "bin"
-	    }
+	}
 	```
 
 2. Then, you can require the package
