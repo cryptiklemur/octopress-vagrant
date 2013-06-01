@@ -20,9 +20,6 @@
         "issues": "https://github.com/aequasi/octopress-vagrant/issues",
         "irc": "irc://irc.freenode.net/sdphp"
     },
-    "require": {
-        "vagrant": "*"
-    },
     "bin": [
         "composer/bin/vagrant"
     ],
